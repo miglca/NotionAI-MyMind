@@ -1,0 +1,108 @@
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:delivered-to:dkim-signature:mime-version:from:to
+         :subject:list-unsubscribe:date:message-id;
+        bh=xzx7IxpHoOW95oj1pvyLuFXt8aJg9hmu6Y30WyrLXPI=;
+        b=FDnWp8Q73TdYtqMNlf7k4/CMy0KjTM9deQbwvK/DTq8bNwUMixTYTq/XpNG02ubacY
+         /bjWWpoeovdlEn28EXTA7QxDsx9/poTIyNk7a3C8ft0kJVirxASWGZ6ZN8J7v9MJ3Xbt
+         7Plja1wE7PIj411klombuqLOb59IB1aJ2Pdv4iwWo8VCVBmJQ8fV+C0Cpvd7PvQOsLea
+         0lqqT0RiqamzXk6VMLDcrpS+JaxbdnzCdEmSI4cNw9WVO2158ZPXSpI5abQulM5jrLyJ
+         /5z+Gs+q3OZsNF2TzEbBC51aUXgxWXaYoOfcigNEX0No/bCiHEp/L9KzoNPp4QEJK/iZ
+         +oXw==
+X-Gm-Message-State: AOAM5335ksZnroNyBLqtg0r9wXot4wQYJExf/dFn+8z4lWaiHz7ppX6A
+	G9ETgTLJtnakmf67NZMgdi0pDf9e28M6D4cVSldHWmvNsp6p/G/9Ew==
+X-Received: by 2002:a25:3b46:: with SMTP id i67mr18553118yba.207.1624706556142;
+        Sat, 26 Jun 2021 04:22:36 -0700 (PDT)
+X-Forwarded-To: support@mcnastystudios.freshdesk.com
+X-Forwarded-For: mcnastystudio@gmail.com support@mcnastystudios.freshdesk.com
+Delivered-To: mcnastystudio@gmail.com
+Received: by 2002:a05:7010:7607:b029:be:a688:89ae with SMTP id m7csp1400617mdg;
+        Sat, 26 Jun 2021 04:22:35 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxRptFiLyCMHmU7+xD+ihnsruK9fydsjhnpq9z4d806KQB+3AQh2QSVaUl15Dspr0Nc0p9m
+X-Received: by 2002:ad4:4aea:: with SMTP id cp10mr15773428qvb.43.1624706554965;
+        Sat, 26 Jun 2021 04:22:34 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1624706554; cv=none;
+        d=google.com; s=arc-20160816;
+        b=IdJqsC/gsN820jwM7yrWHPGD43M36CLvTYTxoOX6igaEfxffeCuPAEqGVJEhwlUGPN
+         uDrV+6Qsv859tD8Baqd9ZIU8Ym5/neQ39ZZJ0o7+W386cej0KTUbbIzGqJZGEGkE3MH+
+         TVEgHqkCj/+5J9avCGIC9J8UcpHsZpNa+6+c0WRi2IJv/hA/CISiWrG/4SX9OmESqiqV
+         vhf9ZS/X6YNgpY73T5bXFpTc6R+xWpm/IkDbhfOyHi9tRJhAyQKWnzrdoUrvsbjQ1UAB
+         Vr5IpXL8GLzsXyt4kg2gCKff9cgFebAI3zzDkPZcaa9EjucrykVlrv1rPNDEwqrpWjTJ
+         VU4w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:date:list-unsubscribe:subject:to:from:mime-version
+         :dkim-signature;
+        bh=xzx7IxpHoOW95oj1pvyLuFXt8aJg9hmu6Y30WyrLXPI=;
+        b=DUbDz8fNk2FmfC7+tvLnkEvOGIXdCaNJ7NH/kWLyC0wsPnRrWgiKmccnT5n2eCi+6p
+         LTSJbrdX9hdSClX/G5Im7Uehj/hMzc5KOlYS2TroLehfYZ2uqjoCbYNGb/EloeWNAuvV
+         GTfEj8ReAZ3jKLPa1YAFfax2KfzvrVdOimM0W/RP7O0gsroLPWGquxjnYgstMWK3ZvEq
+         VB13tk/k7uli0g7+TQ4ejg+PiH+w03aXCvPts+zGhZr2c/SDKciP13HxKVuy2Qc28B6B
+         Wc1zGSxTOqINygudUoJ/F2zexxEFyfSaSMRSV2F9CuQ1cErT9st4BEfNRXl4pV0mydfI
+         p0hQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@quora.com header.s=pigeon header.b=CPr9UfL9;
+       spf=pass (google.com: domain of noreply@quora.com designates 52.86.210.140 as permitted sender) smtp.mailfrom=noreply@quora.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=quora.com
+Return-Path: <noreply@quora.com>
+Received: from o15.pigeon.quora.com (o15.pigeon.quora.com. [52.86.210.140])
+        by mx.google.com with ESMTPS id t13si6201177qtx.308.2021.06.26.04.22.34
+        for <mcnastystudio@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 26 Jun 2021 04:22:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@quora.com designates 52.86.210.140 as permitted sender) client-ip=52.86.210.140;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@quora.com header.s=pigeon header.b=CPr9UfL9;
+       spf=pass (google.com: domain of noreply@quora.com designates 52.86.210.140 as permitted sender) smtp.mailfrom=noreply@quora.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=quora.com
+Received: 
+	by pigeon-at-10030 (OpenSMTPD) with ESMTP id 702f0caa
+	for <mcnastystudio@gmail.com>;
+	Sat, 26 Jun 2021 11:22:33 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=quora.com; h=
+	content-type:mime-version:from:to:subject:list-unsubscribe:date
+	:message-id; s=pigeon; bh=h7Ltnl+hdij+0VrEHSKcWe3bq4U=; b=CPr9Uf
+	L9aKYopI2HyZRyYxaJnw5sMR0WU2wuIldY5fVgQ/qrrcAVWQDSgUhld5brLkkby9
+	4nUognf0BPi64xl0tKckKXpVYccL0jfdR8Ip/jCDYE+fdyS5yFCHqDolyQWiokEL
+	rdBbCzeWaM4nodOosRrTkh2fkm8sjYm3yHyePf/n33/a04e9PJ1vyATA27cEVMfa
+	dpKQ3P5S28drlLr2KcKLH4lhYYqpuequ3xVWu8bVG2A5qNfBk+sjxfSBJlclLNHo
+	1q0Hau7k/fnQFKjHtpqGOzSuqS40sNWlJBiJKn2mqbon+NBmjx21BJkaieoCz3zo
+	v9zPVbhnsSHdEn9g==
+Content-Type: multipart/alternative;
+ boundary="===============5050470238221062972=="
+MIME-Version: 1.0
+From: Quora Digest <english-digest-noreply@quora.com>
+To: mcnastystudio@gmail.com
+Subject: =?utf-8?q?As_a_MacBook_newbie=2C_What_should_I_avoid_when_I_use_it=3F?=
+List-Unsubscribe: <http://www.quora.com/email_optout/qemail_unsubscribe?email_track_id=ee5008e33109486bb8dc7fc679c6e996&ish=1&t=1624706553164123&token=70db1abfc1245a16df2fd08dbfa28d13a02b62522ab36b317b1b47f5c63b1df94d7982035d2b3e943d2ca9b556ca67a3c099b2fface2b47da90176b5a7e4fd77&type=2&uid=1524890903>
+X-CID: yv3SnLM0cMLLPZpGFJxJxcxR2jlJ6KnOo1fAs3PAtIgnbgR9WW9qzzDV3absHtWHQKcVaz56a-FoQ0bCZd7lhvFiYlvhzZP-6vE0-bl-XbO5qlPsmLuI0pMO5Y2MDWNBU3wcAAECAA==
+Date: Sat, 26 Jun 2021 11:22:33 +0000
+Message-ID: <yv3SnLM0cMLLPZpGFJxJxcxR2jlJ6KnOo1fAs3PAtIgnbgR9WW9qzzDV3absHtWHQKcVaz56a-FoQ0bCZd7lhvFiYlvhzZP-6vE0-bl-XbO5qlPsmLuI0pMO5Y2MDWNBU3wcAAECAA==@t1.msgid.quoramail.com>
+X-SMTPAPI: =?utf-8?q?=7B=22unique=5Fargs=22=3A_=7B=22Message-ID=22=3A_=22=3Cyv3SnLM0cML?=
+ =?utf-8?q?LPZpGFJxJxcxR2jlJ6KnOo1fAs3PAtIgnbgR9WW9qzzDV3absHtWHQKcVaz56a-Fo?=
+ =?utf-8?q?Q0bCZd7lhvFiYlvhzZP-6vE0-bl-XbO5qlPsmLuI0pMO5Y2MDWNBU3wcAAECAA=3D?=
+ =?utf-8?q?=3D=40t1=2Emsgid=2Equoramail=2Ecom=3E=22=2C_=22account=22=3A_=22d?=
+ =?utf-8?q?igest=22=2C_=22email=5Ftype=22=3A_2=2C_=22ip=5Fpool=22=3A_=22main?=
+ =?utf-8?q?=22=2C_=22X-QMSG=22=3A_=22cD6cSckXdZ-zyphWaajiAXXfiel9MUHNdKgibhQ?=
+ =?utf-8?q?11zRH5eLxx9cJwwtx2J=5Fq=5FaGCBt40JC9uJQFo4d5VtuZ3pgEvM5YOsI9NkDIH?=
+ =?utf-8?q?y9m4hh1FzwnReKVlE3bbpukUMsveLe6WoXaS9vfiZfTQVzFWFn9RBRVIll7ukys97?=
+ =?utf-8?q?Id4vd1QSfQ02BlmQVWqExbPdkvkSzWpZHDhuBd6YtQRyM8HZBbztdXGZRJYJPXsZw?=
+ =?utf-8?q?QCxSgv0GymP7cuLqAbBf8rZabrSbF-tOmfbr8QWEnm9aXn7N=5FsB6hgzpb266cza?=
+ =?utf-8?q?MH8vj16NOVNgN2pQBOB7giE4CI3y4oYDB2pgPoV0aij=5FzHkzeR7U8ToZ-wcPIeo?=
+ =?utf-8?q?JckWs3V3NPbTkii5vwV81bbiGV6HknbSumK2cbqgIiNXwiNiKgNEQfzmI=5FIyd-z?=
+ =?utf-8?q?GuzBLkImOGBMADFZ-eyuBRBTzoD7aAMENLV1f41oKEmsZgEn6vEx-ZKJnyzsnDDVJ?=
+ =?utf-8?q?LHKiP13VdVtYS43oYRlzv2H9A1nFWwABAgA=3D=22=7D=2C_=22category=22=3A?=
+ =?utf-8?q?_=5B=22account=5Fdigest=22=2C_=22email=5Ftype=5F2=22=2C_=22ip=5Fp?=
+ =?utf-8?q?ool=5Fmain=22=5D=2C_=22filters=22=3A_=7B=22bypass=5Flist=5Fmanage?=
+ =?utf-8?q?ment=22=3A_=7B=22settings=22=3A_=7B=22enable=22=3A_1=7D=7D=7D=2C_?=
+ =?utf-8?q?=22ip=5Fpool=22=3A_=22main=22=7D?=
+X-QMSG: =?utf-8?q?cD6cSckXdZ-zyphWaajiAXXfiel9MUHNdKgibhQ11zRH5eLxx9cJwwtx2J=5Fq=5Fa?=
+ =?utf-8?q?GCBt40JC9uJQFo4d5VtuZ3pgEvM5YOsI9NkDIHy9m4hh1FzwnReKVlE3bbpukUMsv?=
+ =?utf-8?q?eLe6WoXaS9vfiZfTQVzFWFn9RBRVIll7ukys97Id4vd1QSfQ02BlmQVWqExbPdkvk?=
+ =?utf-8?q?SzWpZHDhuBd6YtQRyM8HZBbztdXGZRJYJPXsZwQCxSgv0GymP7cuLqAbBf8rZabrS?=
+ =?utf-8?q?bF-tOmfbr8QWEnm9aXn7N=5FsB6hgzpb266czaMH8vj16NOVNgN2pQBOB7giE4CI3?=
+ =?utf-8?q?y4oYDB2pgPoV0aij=5FzHkzeR7U8ToZ-wcPIeoJckWs3V3NPbTkii5vwV81bbiGV6?=
+ =?utf-8?q?HknbSumK2cbqgIiNXwiNiKgNEQfzmI=5FIyd-zGuzBLkImOGBMADFZ-eyuBRBTzoD?=
+ =?utf-8?q?7aAMENLV1f41oKEmsZgEn6vEx-ZKJnyzsnDDVJLHKiP13VdVtYS43oYRlzv2H9A1n?=
+ =?utf-8?q?FWwABAgA=3D?=
+
+----- Message truncated -----
